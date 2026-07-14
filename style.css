@@ -1,0 +1,60 @@
+/* Reset default browser margins and set box-sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden; /* Prevents scrollbars from appearing */
+    height: 100vh;    /* 100% of the viewport height */
+    display: flex;
+    flex-direction: column;
+    background-color: #008080; /* Classic Windows 95 teal background */
+}
+
+/* The Desktop Area */
+#desktop {
+    flex: 1; /* Takes up all available space except the taskbar */
+    position: relative; /* Needed for absolute positioning of windows later */
+}
+
+/* The Taskbar */
+#taskbar {
+    height: 40px;
+    background-color: #c0c0c0; /* Classic grey */
+    border-top: 2px solid #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    user-select: none; /* Prevents text selection when clicking */
+}
+
+/* Start Button */
+#start-btn {
+    padding: 4px 10px;
+    font-weight: bold;
+    background-color: #c0c0c0;
+    border: 2px solid;
+    /* 3D border effect: light top/left, dark bottom/right */
+    border-color: #ffffff #808080 #808080 #ffffff; 
+    cursor: pointer;
+}
+
+#start-btn:active {
+    /* Pressed 3D effect */
+    border-color: #808080 #ffffff #ffffff #808080;
+}
+
+/* Clock */
+#clock {
+    padding: 4px 10px;
+    background-color: #c0c0c0;
+    /* Inset 3D border effect */
+    border: 2px inset #ffffff;
+    font-family: monospace;
+    font-size: 14px;
+    color: #000000;
+}
