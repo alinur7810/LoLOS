@@ -1,50 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LoLOS - My WebOS</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    
-    <div id="desktop">
+
 
     <div id="desktop">
-        
+        <div class="dekstop-shortcuts">
+            <div class="shortcut" id="shortcut-about">
+                <div class="shortcut-icon">📝</div>
+                <div class="shortcut-label">About Me</div>
+            </div>
+
+            <div class="shortcut" id="shortcut-notepad">
+                <div class="shortcut-icon">🗒️</div>
+                <div class="shortcut-label">Notepad</div>
+            </div>
+
+            <div class="shortcut" id="shortcut-player">
+                <div class="shortcut-icon">🎵</div>
+                <div class="shortcut-label">Music</div>
+            </div>
+        </div>
+
         <div class="window" id="window-about">
             <div class="window-header">
                 <span class="window-title">About Me</span>
                 <div class="window-controls">
                     <button class="control-btn min-btn">—</button>
                     <button class="control-btn max-btn">▢</button>
-                    <button class="control-btn close-btn">X</button>
+                    <button class="control-btn close-btn" id="close-about">X</button>
                 </div>
             </div>
-            
-            
+
+
             <div class="window-body">
                 <h3>Welcome to LoLOS!</h3>
-                <p>I'm a 10th grade student learning web development. This is my personal WebOS project built for the Hack Club Stardance marathon.</p>
-                <p>Currently, Im building the window system. Next, I'll make this window draggable using JavaScript!</p>
+                <p>I'm a 10th grade student learning web development. This is my personal WebOS project built for the
+                    Hack Club Stardance marathon.</p>
+                <p>I already have experince at competitive programming in c++, and now I hope to learn web developing at
+                    least aon beginer level </p>
+            </div>
+        </div>
+
+        <div class="window" id="window-notepad" style="display: none; top:140px; left: 140px">
+            <div class="window-header">
+                <span class="window-title">Notepad</span>
+                <div class="window-controls">
+                    <button class="control-btn min-btn">—</button>
+                    <button class="control-btn max-btn">▢</button>
+                    <button class="control-btn close-btn" id="close-notepad">X</button>
+                </div>
+            </div>
+            <div class="window-body" style="padding: 0;">
+                <textarea id="notepad-textarea" placeholder="Start typing..."></textarea>
+            </div>
+        </div>
+
+        <div class="window" id="window-player" style="display: none; top: 200px; left: 200px; width: 355px">
+            <div class="window-header">
+                <span class="window-title">Music Player</span>
+                <div class="window-controls">
+                    <button class="control-btn min-btn">—</button>
+                    <button class="control-btn max-btn">▢</button>
+                    <button class="control-btn close-btn" id="close-player">X</button>
+                </div>
+            </div>
+            <div class="window-body">
+                <audio id="audio-element"></audio>
+
+                <div id="player-screen">Select a song to play</div>
+
+                <div class="player-controls">
+                    <button id="btn-play">Play</button>
+                    <button id="btn-pause">Pause</button>
+                </div>
+
+                <ul id="playlist">
+                    <li class="playlist-item" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">SoundHelix - Song 1</li>
+                    <li class="playlist-item" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3">SoundHelix - Song 2</li>
+                    <li class="playlist-item" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3">SoundHelix - Song 3</li>
+                    <li class="playlist-item" data-src="notrickroll.mp3">NOT Rick Astley - NOT Rickroll</li>
+                </ul>
             </div>
         </div>
 
     </div>
     </div>
 
-    
+
     <div id="taskbar">
         <button id="start-btn">Start</button>
-        
+
         <div id="taskbar-apps">
-            
+
         </div>
-        
+
         <div id="clock"></div>
     </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
