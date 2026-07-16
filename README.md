@@ -2,7 +2,7 @@
 
 A retro windows 95 styled WebOS with little personal portfolio, draggable windows, an interactive music player, and a functional notepad.
 
-![LoLOS Screenshot](Screen Recording 2026-07-16 200634.mp4)
+![LoLOS Screenshot](demoscreen)
 
 ## 🚀 Try It Out
 
